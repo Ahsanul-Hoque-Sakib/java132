@@ -1,0 +1,20 @@
+package coursemanagement;
+
+
+public class CourseManagement {
+
+    
+    public static void main(String[] args) {
+        
+        Course c1 = new Course();
+        
+        c1.setValue("swe132","java",4.0,"SRS",4);
+        c1.Display();
+        c1.monthlyClass();
+        c1.yearlyClass();
+       
+       
+        
+    }
+    
+}
