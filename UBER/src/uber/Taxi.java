@@ -17,11 +17,16 @@ public class Taxi {
         Double amount = TotalAmount*discount;
         return amount;
     }   
-        public Double PayableAmount(Double TotalAmount,Double Discount){
+      public Double PayableAmount(Double TotalAmount,Double Discount){
+            
+        if(Promotion_Discount.equalsIgnoreCase("Active")){
         Double Payable = TotalAmount - Discount;
         return Payable;
-            
+        }
+        else{
+           return TotalAmount;
     }
+        }
     public void Display(){
         System.out.println("TravelDistance:"+travelDistance+"\n"+"PerKMPrice:"+perKMPrice+"\n"+
                 "PromotionDiscount:"+Promotion_Discount);
