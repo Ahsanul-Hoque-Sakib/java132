@@ -6,7 +6,6 @@ public class MeenaBazar {
 
         Scanner input = new Scanner(System.in);
         int quantity;
-        Double tp =0.0;
         Double total=0.0;
         Double Price=0.0;
         Double rice = 60.0;
@@ -17,6 +16,11 @@ public class MeenaBazar {
         System.out.println("2.Dal||Price:130p/kg||Available");
         System.out.println("3.Beef||Price:550p/kg||Available");
         
+        System.out.println("Input SalesPerson Info");
+        SalesPerson SP = new SalesPerson();
+        SP.salesPersonInfo();
+        
+        System.out.println("Input Cusotmer Info");
         Customer obj = new Customer();
         obj.inputCustomerInfo();
          System.out.println("How many products you Want:");
@@ -57,6 +61,11 @@ public class MeenaBazar {
         System.out.println("TotalPrice:"+total);
         Double Tax=obj.taxAmount(total);
         System.out.println("Tax:"+Tax);
+        
+        System.out.println("SalesPersonInfo");
+        SP.printSalesPersonInfo();
+        
+        System.out.println("CustomerInfo");
         obj.printCustomerInfo();
         Double discount = obj.customerType();
         System.out.println("Discount:"+discount);
