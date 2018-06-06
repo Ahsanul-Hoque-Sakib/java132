@@ -15,7 +15,6 @@ public class MeenaBazar {
         System.out.println("1.Rice||Price:60p/kg||Available");
         System.out.println("2.Dal||Price:130p/kg||Available");
         System.out.println("3.Beef||Price:550p/kg||Available");
-        
         System.out.println("Input SalesPerson Info");
         SalesPerson SP = new SalesPerson();
         SP.salesPersonInfo();
@@ -57,14 +56,11 @@ public class MeenaBazar {
          total =obj.totalPrice(Price);
             
         }
-        
-        System.out.println("TotalPrice:"+total);
-        Double Tax=obj.taxAmount(total);
-        System.out.println("Tax:"+Tax);
-        
         System.out.println("SalesPersonInfo");
         SP.printSalesPersonInfo();
-        
+        System.out.println("TotalPrice:"+total);
+        Double Tax=obj.taxAmount();
+        System.out.println("Tax:"+Tax);
         System.out.println("CustomerInfo");
         obj.printCustomerInfo();
         Double discount = obj.customerType();
