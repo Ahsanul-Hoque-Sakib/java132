@@ -22,8 +22,8 @@ public class Customer extends Person{
         return totalPrice;
     }
     
-    public Double taxAmount(Double total){
-        return totalPrice*0.02;
+    public Double taxAmount(){
+        return totalPrice*tax;
     }
     
     public Double customerType(){
@@ -33,7 +33,7 @@ public class Customer extends Person{
         }
         
         else{
-            Discount=totalPrice*0.05;
+            Discount=totalPrice*discount;
         }
             
          return Discount;   
